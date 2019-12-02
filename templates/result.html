@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Afaria Sessions</title>
+    </head>
+        <body>
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='static.css') }}" />
+            <h1>Sessions are below</h1>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>User</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for m in final %}
+                    <tr>
+                        <td>{{ m[2] }}</td>
+                        <td>{{ m[0] }}</td>
+                        <td>{{ m[1] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </body>
+ </html>
